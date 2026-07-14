@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap:https://rishi-dixit-portfolio.netlify.app//sitemap.xml
