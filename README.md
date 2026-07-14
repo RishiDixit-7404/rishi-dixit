@@ -1,47 +1,151 @@
-# Rishi Dixit | Personal Portfolio
+# Rishi Dixit — Portfolio
 
-Welcome to my personal portfolio! I am an **Agentic AI Engineer & Backend Developer** specializing in building modern AI-driven backend systems, cloud architectures, and asynchronous workflows.
+My personal portfolio showcasing my work in **Agentic AI**, **Backend Engineering**, and **Cloud Engineering**.
 
-## 🚀 Live Demo
-*(Your Vercel/Netlify link goes here - e.g., https://rishi-dixit.vercel.app)*
+The website highlights my experience, technical skills, internship, and a collection of production-oriented AI systems and backend projects that I've built.
 
-## 💡 Tech Stack
-This portfolio is built with the following modern web technologies:
-- **React** (v19)
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS v4**
-- **GSAP** (GreenSock Animation Platform)
+## Live Portfolio
 
-## 📂 Project Structure
-- `src/components/` - Reusable UI components (Project Cards, ID Card, Work Experience).
-- `src/data/projects.ts` - All of my project data, hackathons, and internship details.
-- `public/` & `assets/` - Static assets including images, PDFs, and icons.
+🌐 **Portfolio:** https://your-portfolio-link.com
 
-## 🛠️ Local Development
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/RishiDixit-7404/rishi-dixit.git
-   cd rishi-dixit
-   ```
+## About
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+I'm **Rishi Dixit**, a Computer Science (AI/ML) graduate and Software Engineering Intern at Grant Thornton Bharat.
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` to view it in your browser.
+I enjoy building production-oriented backend systems, AI agents, document processing pipelines, and cloud-native applications. Most of my work focuses on designing reliable systems that automate complex workflows using modern AI and backend technologies.
 
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
+This portfolio serves as an interactive version of my resume, providing a deeper look into my experience, projects, and technical capabilities.
 
-## 📫 Get In Touch
-- **LinkedIn:** [rishi-dixit-461035279](https://www.linkedin.com/in/rishi-dixit-461035279/)
-- **GitHub:** [@RishiDixit-7404](https://github.com/RishiDixit-7404)
+---
+
+## Featured Projects
+
+The portfolio showcases projects including:
+
+- **Lumina** — Local-first Multi-Agent RAG Platform
+- **DPDP PrivacyOps** — Developer-first Privacy Compliance Platform
+- **Enterprise Knowledge Guardian (EKG)** — Offline-first Enterprise RAG System
+- **BackCheck AI** — AI-powered Background Verification Platform
+- **MarketsBot** — Multi-Agent Company Research & Report Automation
+
+Each project includes:
+
+- Overview
+- Technology Stack
+- Architecture
+- Key Features
+- GitHub Repository
+- Screenshots
+
+---
+
+## Experience
+
+### Grant Thornton Bharat
+
+**Software Engineering Intern**
+
+Worked on production AI backend systems involving:
+
+- FastAPI
+- Azure OpenAI
+- Tool Calling Agents
+- Document Processing Pipelines
+- Azure Cloud
+- REST APIs
+- Enterprise Workflow Automation
+
+---
+
+## Tech Stack
+
+### Languages
+
+- Python
+- Java
+- SQL
+
+### AI & Agents
+
+- Azure OpenAI
+- Azure AI Foundry
+- MCP
+- Tool Calling
+- RAG
+
+### Backend
+
+- FastAPI
+- REST APIs
+- Authentication
+- API Architecture
+
+### Cloud & Tools
+
+- Microsoft Azure
+- Azure Functions
+- Azure Storage
+- Docker
+- Git
+- GitHub
+- Linux
+- VS Code
+
+---
+
+## Portfolio Features
+
+- Responsive modern UI
+- Interactive project showcase
+- Resume-style experience timeline
+- GitHub integration
+- Direct project navigation
+- Mobile-friendly design
+
+---
+
+## Running Locally
+
+Clone the repository
+
+```bash
+git clone https://github.com/RishiDixit-7404/rishi-dixit.git
+cd rishi-dixit
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Connect With Me
+
+GitHub  
+https://github.com/RishiDixit-7404
+
+LinkedIn  
+https://www.linkedin.com/in/rishi-dixit-7404/
+
+Email  
+rishidixit.7404@icloud.com
+
+---
+
+Thank you for visiting my portfolio!
