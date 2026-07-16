@@ -87,7 +87,7 @@ export const HorizontalProjectCard: React.FC<{
 			id={id}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			className={`shrink-0 w-[85vw] md:w-[30vw] h-[60vh] md:h-[500px] 
+			className={`shrink-0 w-[85vw] md:w-[30vw] h-[65vh] md:h-[520px] 
       border-2 border-black p-5 
       shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] 
       hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
@@ -105,7 +105,7 @@ export const HorizontalProjectCard: React.FC<{
 			)}
 
 			{/* === MEDIA SECTION === */}
-			<div className="relative w-full h-1/2 border-b-2 border-black overflow-hidden mb-4 bg-gray-100 group-inner">
+			<div className="relative w-full h-[200px] md:h-[220px] border-b-2 border-black overflow-hidden mb-4 bg-gray-100 group-inner">
 				{slides.length === 0 ? (
 					/* --- NO IMAGE PLACEHOLDER --- */
 					<div className="w-full h-full flex flex-col items-center justify-center bg-[#e5e5e5] select-none">
@@ -234,7 +234,7 @@ export const HorizontalProjectCard: React.FC<{
 			{/* DESCRIPTION */}
 			<p
 				itemProp="description"
-				className="text-lg font-mono text-black mb-4 line-clamp-3 font-medium"
+				className="text-lg font-mono text-black mb-4 font-medium"
 			>
 				{project.description}
 			</p>

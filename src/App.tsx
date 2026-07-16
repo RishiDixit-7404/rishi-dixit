@@ -254,7 +254,7 @@ export default function App() {
 														Rishi Dixit
 													</h4>
 													<p className="font-mono text-[10px] text-gray-500 truncate">
-														Jaipur, Rajasthan
+														Kanpur, Uttar Pradesh
 													</p>
 													<p className="font-mono text-[10px] text-gray-500">
 														+91 94506 93480

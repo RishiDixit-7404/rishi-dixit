@@ -47,7 +47,7 @@ export const PROJECTS_DATA: ProjectsMap = {
 			name: "Enterprise Knowledge Guardian",
 			type: "Personal",
 			description:
-				"Offline-first enterprise RAG platform combining hybrid retrieval, knowledge graphs, and agentic verification to deliver grounded answers with claim-level citations and hallucination prevention.",
+				"Enterprise RAG platform combining hybrid retrieval, knowledge graphs, and claim-level verification.",
 			stack: ["FASTAPI", "LANGGRAPH", "NEO4J", "PGVECTOR", "HYBRID RAG"],
 			year: "2026",
 			image: "/images/knowledge.png",
