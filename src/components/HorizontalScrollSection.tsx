@@ -150,7 +150,7 @@ export const HorizontalScrollSection: React.FC<
 					// Dynamic end based on actual content width + extra room
 					end: () =>
 						"+=" +
-						(sectionRef.current!.scrollWidth - window.innerWidth + window.innerWidth * 0.3),
+						(sectionRef.current!.scrollWidth - window.innerWidth + window.innerWidth * 0.3) * 1.8,
 					scrub: 0.8,
 					pin: true,
 					invalidateOnRefresh: true,
