@@ -6,7 +6,7 @@ The website highlights my experience, technical skills, internship, and a collec
 
 ## Live Portfolio
 
-🌐 **Portfolio:** https://your-portfolio-link.com
+🌐 **Portfolio:** https://rishi-dixit.vercel.app
 
 ---
 
