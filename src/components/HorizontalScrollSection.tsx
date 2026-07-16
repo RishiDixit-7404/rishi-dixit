@@ -10,7 +10,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import type { FlattenedProject, ProjectsData } from "../types";
-import {  Globe, User } from "lucide-react";
+import { Globe, User } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -133,27 +133,34 @@ export const HorizontalScrollSection: React.FC<
 		() => {
 			if (!sectionRef.current || !triggerRef.current) return;
 
-			const scrollWidth = sectionRef.current.scrollWidth;
-			const viewportWidth = window.innerWidth;
-			const xMove = -(scrollWidth - viewportWidth + 100);
+			// Use functional values so invalidateOnRefresh actually recalculates
+			// Extra padding so the last card can be fully centered
+			const getScrollDistance = () => {
+				if (!sectionRef.current) return 0;
+				return -(sectionRef.current.scrollWidth - window.innerWidth + window.innerWidth * 0.3);
+			};
 
 			gsap.to(sectionRef.current, {
-				x: xMove,
+				x: getScrollDistance,
 				ease: "none",
 				scrollTrigger: {
 					id: "projectScroller",
 					trigger: triggerRef.current,
 					start: "top top",
-					end: "+=4000",
-					scrub: 1,
+					// Dynamic end based on actual content width + extra room
+					end: () =>
+						"+=" +
+						(sectionRef.current!.scrollWidth - window.innerWidth + window.innerWidth * 0.3),
+					scrub: 0.8,
 					pin: true,
 					invalidateOnRefresh: true,
-					anticipatePin: 1,
 					onUpdate: (self) => {
 						if (isAutoScrolling.current) return;
 
-						// --- Optimized Scroll Detection Logic ---
 						const progress = self.progress;
+						const scrollWidth =
+							sectionRef.current!.scrollWidth;
+						const viewportWidth = window.innerWidth;
 						const totalHorizontalScroll =
 							scrollWidth - viewportWidth;
 						const currentX = progress * totalHorizontalScroll;
@@ -170,7 +177,6 @@ export const HorizontalScrollSection: React.FC<
 								centerViewX >= card.left &&
 								centerViewX <= card.left + card.width + 100
 							) {
-								// +100 for gap
 								activeCat = card.category;
 								break;
 							}
@@ -200,11 +206,10 @@ export const HorizontalScrollSection: React.FC<
 						<button
 							key={tab.id}
 							onClick={() => handleTabClick(tab.id)}
-							className={`flex items-center gap-2 px-4 py-1 font-mono text-xl font-bold uppercase border border-black transition-all magnetic relative z-50 ${
-								activeTab === tab.id
+							className={`flex items-center gap-2 px-4 py-1 font-mono text-xl font-bold uppercase border border-black transition-all magnetic relative z-50 ${activeTab === tab.id
 									? "bg-black text-white"
 									: "bg-white text-black hover:bg-gray-200"
-							}`}
+								}`}
 						>
 							<tab.icon size={12} />
 							{tab.label}
@@ -225,13 +230,13 @@ export const HorizontalScrollSection: React.FC<
 						<React.Fragment key={idx}>
 							{(idx === 0 ||
 								allProjects[idx - 1].category !==
-									project.category) && (
-								<div className="shrink-0 w-[5vw] md:w-[2vw] h-[60vh] border-l-2 border-dashed border-black/50 flex flex-col justify-center items-center mr-8">
-									<div className="rotate-90 font-mono text-xl font-bold tracking-widest text-gray-800 whitespace-nowrap">
+								project.category) && (
+									<div className="shrink-0 w-[5vw] md:w-[2vw] h-[60vh] border-l-2 border-dashed border-black/50 flex flex-col justify-center items-center mr-8">
+										<div className="rotate-90 font-mono text-xl font-bold tracking-widest text-gray-800 whitespace-nowrap">
 										// {project.category.toUpperCase()} ZONE
+										</div>
 									</div>
-								</div>
-							)}
+								)}
 							<HorizontalProjectCard
 								project={project}
 								index={idx}
