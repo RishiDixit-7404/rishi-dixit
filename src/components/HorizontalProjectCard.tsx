@@ -87,7 +87,7 @@ export const HorizontalProjectCard: React.FC<{
 			id={id}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			className={`shrink-0 w-[85vw] md:w-[30vw] h-[65vh] md:h-[520px] 
+			className={`shrink-0 w-[85vw] md:w-[30vw] min-h-[65vh] md:min-h-[520px] h-auto
       border-2 border-black p-5 
       shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] 
       hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]
@@ -105,7 +105,7 @@ export const HorizontalProjectCard: React.FC<{
 			)}
 
 			{/* === MEDIA SECTION === */}
-			<div className="relative w-full h-[200px] md:h-[220px] border-b-2 border-black overflow-hidden mb-4 bg-gray-100 group-inner">
+			<div className="relative w-full aspect-[16/10] border-b-2 border-black overflow-hidden mb-4 bg-gray-100 group-inner">
 				{slides.length === 0 ? (
 					/* --- NO IMAGE PLACEHOLDER --- */
 					<div className="w-full h-full flex flex-col items-center justify-center bg-[#e5e5e5] select-none">
@@ -168,11 +168,11 @@ export const HorizontalProjectCard: React.FC<{
 									currentSlide + 1
 								}`}
 								itemProp="image screenshot"
-								className={`w-full h-full object-cover transition-all duration-700 
+								className={`w-full h-full transition-all duration-700 
                 ${
 					activeMedia?.type === "arch"
 						? "object-contain p-4 bg-white"
-						: "object-cover"
+						: "object-contain"
 				} 
                 ${
 					isHovered ? "grayscale-0 scale-105" : "grayscale opacity-90"

@@ -224,14 +224,14 @@ export const HorizontalScrollSection: React.FC<
 			>
 				<div
 					ref={sectionRef}
-					className="flex items-center w-max pr-24 gap-4"
+					className="flex items-stretch w-max pr-24 gap-4 py-8"
 				>
 					{allProjects.map((project, idx) => (
 						<React.Fragment key={idx}>
 							{(idx === 0 ||
 								allProjects[idx - 1].category !==
 								project.category) && (
-									<div className="shrink-0 w-[5vw] md:w-[2vw] h-[60vh] border-l-2 border-dashed border-black/50 flex flex-col justify-center items-center mr-8">
+									<div className="shrink-0 w-[5vw] md:w-[2vw] h-[60vh] border-l-2 border-dashed border-black/50 flex flex-col justify-center items-center mr-8 self-center">
 										<div className="rotate-90 font-mono text-xl font-bold tracking-widest text-gray-800 whitespace-nowrap">
 										// {project.category.toUpperCase()} ZONE
 										</div>
